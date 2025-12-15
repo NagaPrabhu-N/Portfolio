@@ -1,0 +1,164 @@
+.about-section.dark {
+  --bg: #000000;
+  --text: #ffffff;
+  --muted: #9ca3af;
+  --card-border: rgba(255, 255, 255, 0.15);
+  --hover-title: #ffffff;
+}
+/* LIGHT THEME */
+.about-section.light {
+  --bg: #ffffff;
+  --text: #000000;
+  --muted: #6b7280;
+  --card-border: rgba(0, 0, 0, 0.15);
+  --hover-title: #000000;
+}
+.about-section {
+  background: var(--bg);
+  color: var(--text);
+  padding: 4rem 7rem;
+  min-height: 100vh;
+  transition: background 1.3s ease, color 1.3s ease;
+}
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+}
+
+/* Desktop resume wrapper - centers the button horizontally */
+.resume-wrapper-desktop {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* TEXT CONTENT */
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.about-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+/* RESUME BUTTON (shared styles) */
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #2563eb;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: larger;
+  text-decoration: none;
+}
+
+/* IMAGE WRAPPER */
+.about-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* IMAGE STYLE (Polaroid look) */
+.about-image {
+  display: flex;
+  justify-content: center;
+}
+.about-image img {
+  width: 260px;
+  border-radius: 6px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  transform: rotate(10deg);
+}
+
+/* SOCIAL LINKS */
+.about-socials {
+  display: none;
+  margin-top: 3rem;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.about-socials a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.85;
+}
+.about-socials a:hover {
+  opacity: 1;
+}
+
+.resume-btn-mobile{
+  display: none;
+}
+
+.resume-wrapper-desktop .resume-btn:hover {
+  background: #ffffff;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+/* Tablet & Mobile: Hide desktop button, show mobile button below image */
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 3rem;
+  }
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .about-image img {
+    width: 220px;
+  }
+  .about-socials {
+    display: flex;
+  }
+
+  .resume-wrapper-desktop {
+    display: none;
+  }
+  .resume-btn-mobile{
+    display: inline-flex;
+  }
+  .resume-btn-mobile .resume-btn:hover {
+    background: #ffffff;
+  }
+  /* Mobile button is already visible and centered via wrapper */
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .about-section {
+    padding: 2rem 1.5rem 6rem;
+  }
+  .about-title {
+    font-size: 2rem;
+  }
+  .about-content p {
+    font-size: 0.95rem;
+  }
+  .about-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .resume-btn-mobile .resume-btn:hover {
+    background: #ffffff;
+  }
+}

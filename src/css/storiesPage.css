@@ -1,0 +1,271 @@
+/* ===============================
+   THEME VARIABLES
+================================ */
+
+.stories-section.dark {
+  --bg: #000000;
+  --text: #ffffff;
+  --muted: #9ca3af;
+  --card-bg: #111827;
+  --border: rgba(255, 255, 255, 0.15);
+}
+
+.stories-section.light {
+  --bg: #ffffff;
+  --text: #000000;
+  --muted: #6b7280;
+  --card-bg: #ffffff;
+  --border: rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   BASE
+================================ */
+
+.stories-section {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  padding: 4rem 7rem;
+  transition: background 1.3s ease, color 1.3s ease;
+}
+
+.stories-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stories-header p {
+  color: var(--muted);
+  max-width: 600px;
+}
+
+/* ===============================
+   GRID
+================================ */
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.story-card {
+  cursor: pointer;
+  /* border: 2px solid black; */
+}
+
+.story-card:hover .story-img{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.story-img {
+  /* background: none; */
+  height: 250px;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(128, 128, 128, 0.218);
+}
+
+.story-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border: 2px solid black; */
+}
+
+.story-meta {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.story-card:hover .story-meta{
+    color: blue;
+    transition: transform 0.3s ease
+}
+
+.story-card p {
+  margin-top: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: semi-bold;
+}
+
+/* ===============================
+   DETAIL VIEW
+================================ */
+
+.story-detail {
+  max-width: 720px;
+  margin: 3rem auto 0;
+}
+
+.story-detail .detail-img {
+  background: none;
+  border-radius: 1.2rem;
+  width: 320px;
+  height: 320px;
+  overflow: hidden;
+  margin-left: 25%;
+  border: 1px solid rgba(128, 128, 128, 0.34);
+}
+
+.detail-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* border: 1px solid rgba(128, 128, 128, 0.34);   */
+}
+
+.detail-meta {
+  margin-top: 1rem;
+  color: var(--muted);
+}
+
+.story-detail h3 {
+  margin: 1.2rem 0;
+  font-size: 1.5rem;
+}
+
+.detail-content {
+  white-space: pre-line;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* ===============================
+   MORE STORIES
+================================ */
+
+.more-stories {
+  margin-top: 4rem;
+}
+
+.more-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.more-header span {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.more-header button {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* GRID */
+.more-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.more-card {
+  cursor: pointer;
+}
+
+.more-img {
+  height: 260px;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(128, 128, 128, 0.34);;
+}
+
+.more-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.more-card h4 {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+}
+.story-block {
+  margin-bottom: 1.2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1.6s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-loader {
+  height: 1px;
+}
+
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .stories-section {
+    padding: 3rem;
+  }
+
+  .stories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .stories-section {
+    padding: 2rem 1.5rem 6rem;
+  }
+
+  .stories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-img img {
+    height: 250px;
+  }
+  .detail-img{
+    width: 100%;
+    margin-left: 0;
+  }
+  .detail-img img {
+    height: 240px;
+  }
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .more-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .more-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .more-img img {
+    height: 200px;
+  }
+}

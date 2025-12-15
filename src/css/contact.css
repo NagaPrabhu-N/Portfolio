@@ -1,0 +1,149 @@
+/* ===============================
+   THEME VARIABLES
+================================ */
+
+.contact-section.dark {
+  --bg: #000000;
+  --text: #ffffff;
+  --muted: #9ca3af;
+  --input-bg: #111827;
+  --border: rgba(255, 255, 255, 0.15);
+}
+
+.contact-section.light {
+  --bg: #ffffff;
+  --text: #000000;
+  --muted: #6b7280;
+  --input-bg: #ffffff;
+  --border: rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   BASE
+================================ */
+
+.contact-section {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  padding: 3rem 7rem;
+  transition: background 1.3s ease, color 1.3s ease;
+}
+
+.contact-wrapper {
+  max-width: 520px;
+}
+
+/* ===============================
+   HEADER
+================================ */
+
+.contact-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+.contact-header span {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* ===============================
+   FORM
+================================ */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  padding: 0.75rem 0.9rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text);
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--muted);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+
+.contact-btn {
+  margin-top: 0.8rem;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  opacity: 0.95;
+}
+
+/* ===============================
+   FOOT NOTE
+================================ */
+
+.contact-note {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.8rem;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .contact-section {
+    padding: 3rem 7rem;
+  }
+
+  .contact-header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .contact-section {
+    padding: 2rem 1.5rem 6rem;
+  }
+
+  .contact-header h1 {
+    font-size: 1.8rem;
+  }
+}
