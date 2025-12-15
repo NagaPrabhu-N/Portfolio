@@ -4,9 +4,9 @@ import nammaCartLogo from '../assets/NammaCartLogo.png';
 import firstCrick from '../assets/CricklyticsDetails/first.png'
 import secondCrick from '../assets/CricklyticsDetails/second.png'
 import thirdCrick from '../assets/CricklyticsDetails/third.png'
-import firstNamma from '../assets/NammaKartDetails/first.jpg'
-import secondNamma from '../assets/NammaKartDetails/second.png'
-import thirdNamma from '../assets/NammaKartDetails/third.jpg'
+import firstNamma from '../assets/NammaCartDetails/first.jpg'
+import secondNamma from '../assets/NammaCartDetails/second.png'
+import thirdNamma from '../assets/NammaCartDetails/third.jpg'
 import './../css/homePage.css'
 
 function HomePage({ theme, setActivePage, setSelectedWork }) {
