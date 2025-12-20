@@ -10,7 +10,7 @@ import './App.css'
 
 function App() {
   const [activePage, setActivePage] = useState(() => {
-    return localStorage.getItem("activePage") || "works";
+    return localStorage.getItem("activePage") || "home";
   });
 
   const [selectedWork, setSelectedWork] = useState(null);
